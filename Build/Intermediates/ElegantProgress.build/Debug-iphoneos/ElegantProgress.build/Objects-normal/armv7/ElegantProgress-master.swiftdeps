@@ -1,0 +1,7 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "c1bbc77cd081924fc6f1411f0513b011"
+inputs: 
+- "/Users/wayne/Desktop/ElegantProgress/ElegantProgress/UIColor+Ex.swift"
+- "/Users/wayne/Desktop/ElegantProgress/ElegantProgress/ElegantProgressView.swift"
+- "/Users/wayne/Desktop/ElegantProgress/ElegantProgress/ViewController.swift"
+- "/Users/wayne/Desktop/ElegantProgress/ElegantProgress/AppDelegate.swift"

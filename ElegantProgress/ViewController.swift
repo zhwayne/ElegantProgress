@@ -8,18 +8,20 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
+    var progressView: ElegantProgressView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let bounds = CGRectMake(0, 0, 260, 260)
+        let center = CGPointMake(view.bounds.width / 2, view.bounds.height / 2)
+        progressView = ElegantProgressView(frame: bounds)
+        progressView.center = center
+        
+        self.view.addSubview(progressView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

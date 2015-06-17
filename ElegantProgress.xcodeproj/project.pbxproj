@@ -12,6 +12,9 @@
 		B081FFB81B31193100BDA08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B081FFB61B31193100BDA08D /* Main.storyboard */; };
 		B081FFBA1B31193100BDA08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B081FFB91B31193100BDA08D /* Assets.xcassets */; };
 		B081FFBD1B31193100BDA08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B081FFBB1B31193100BDA08D /* LaunchScreen.storyboard */; };
+		B081FFC51B3119E500BDA08D /* ElegantProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081FFC41B3119E500BDA08D /* ElegantProgressView.swift */; };
+		B081FFC71B311D9700BDA08D /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081FFC61B311D9700BDA08D /* UIColor+Ex.swift */; };
+		B081FFC91B312E9E00BDA08D /* InnerShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B081FFC81B312E9D00BDA08D /* InnerShadowLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B081FFB91B31193100BDA08D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B081FFBC1B31193100BDA08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B081FFBE1B31193100BDA08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B081FFC41B3119E500BDA08D /* ElegantProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElegantProgressView.swift; sourceTree = "<group>"; };
+		B081FFC61B311D9700BDA08D /* UIColor+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		B081FFC81B312E9D00BDA08D /* InnerShadowLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadowLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				B081FFB21B31193100BDA08D /* AppDelegate.swift */,
 				B081FFB41B31193100BDA08D /* ViewController.swift */,
+				B081FFC61B311D9700BDA08D /* UIColor+Ex.swift */,
+				B081FFC41B3119E500BDA08D /* ElegantProgressView.swift */,
+				B081FFC81B312E9D00BDA08D /* InnerShadowLayer.swift */,
 				B081FFB61B31193100BDA08D /* Main.storyboard */,
 				B081FFB91B31193100BDA08D /* Assets.xcassets */,
 				B081FFBB1B31193100BDA08D /* LaunchScreen.storyboard */,
@@ -134,7 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B081FFC71B311D9700BDA08D /* UIColor+Ex.swift in Sources */,
+				B081FFC51B3119E500BDA08D /* ElegantProgressView.swift in Sources */,
 				B081FFB51B31193100BDA08D /* ViewController.swift in Sources */,
+				B081FFC91B312E9E00BDA08D /* InnerShadowLayer.swift in Sources */,
 				B081FFB31B31193100BDA08D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +261,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElegantProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wayne.ElegantProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,6 +273,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElegantProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wayne.ElegantProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
