@@ -10,6 +10,29 @@ import UIKit
 
 class ElegantProgressView: UIView {
     private var textLabel: UILabel!
+    private var progressLayer: CAShapeLayer!
+    
+    var progress:CGFloat {
+        get { return progressLayer.strokeEnd }
+        set{
+            var realValue = newValue
+            if realValue < CGFloat.min {
+                realValue = CGFloat.min
+            }
+            
+            progressLayer.strokeEnd = realValue
+            
+            if realValue <= CGFloat.min {
+                textLabel.text = "Waiting..."
+            }
+            else if realValue == 1 {
+                textLabel.text = "Done"
+            }
+            else {
+                textLabel.text = NSString(format: "%.f%%", realValue * 100) as String
+            }
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -160,6 +183,44 @@ class ElegantProgressView: UIView {
             
         }
         addTextLabel()
+        
+        
+        func addProgress() {
+            
+            let gradientLayer          = CAGradientLayer()
+            gradientLayer.frame        = layer.bounds
+            gradientLayer.cornerRadius = gradientLayer.bounds.width / 2
+            gradientLayer.colors       = [UIColor.hexColor(0x70dc98).CGColor, UIColor.hexColor(0x70dcbf).CGColor]
+            gradientLayer.locations    = [0, 1]
+            gradientLayer.startPoint   = CGPointMake(0.25, 0)
+            gradientLayer.endPoint     = CGPointMake(0.75, 1)
+            
+            layer.insertSublayer(gradientLayer, atIndex: 0)
+            
+            
+            let middleRectInset = layer.bounds.width * 0.1
+            let path            = UIBezierPath(arcCenter: layer.position, radius: (layer.bounds.width - middleRectInset) / 2, startAngle: CGFloat(angle: -90), endAngle: CGFloat(angle: 270), clockwise: true).CGPath
+            
+            progressLayer             = CAShapeLayer()
+            progressLayer.frame       = CGRectInset(layer.bounds, layer.borderWidth, layer.borderWidth)
+            progressLayer.fillColor   = UIColor.clearColor().CGColor
+            progressLayer.strokeColor = UIColor.hexColor(0x70dc98).CGColor
+            progressLayer.opacity     = 0.8
+            progressLayer.lineCap     = kCALineCapRound
+            progressLayer.lineWidth   = middleRectInset
+            progressLayer.path        = path
+            progressLayer.strokeEnd   = CGFloat.min
+            
+            gradientLayer.mask = progressLayer
+            
+        }
+        addProgress()
     }
-    
+}
+
+
+extension CGFloat {
+    init(angle: CGFloat) {
+        self = angle * CGFloat(M_PI) / 180.0
+    }
 }
