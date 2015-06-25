@@ -19,8 +19,13 @@ class ElegantProgressView: UIView {
             if realValue < CGFloat.min {
                 realValue = CGFloat.min
             }
-            
+                        
+            CATransaction.begin()
+            CATransaction.setDisableActions(false)
+            CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn))
+            CATransaction.setAnimationDuration(0.001)
             progressLayer.strokeEnd = realValue
+            CATransaction.commit()
             
             if realValue <= CGFloat.min {
                 textLabel.text = "Waiting..."

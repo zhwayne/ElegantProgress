@@ -105,6 +105,7 @@ SWIFT_CLASS("_TtC15ElegantProgress11AppDelegate")
 
 SWIFT_CLASS("_TtC15ElegantProgress19ElegantProgressView")
 @interface ElegantProgressView : UIView
+@property (nonatomic) CGFloat progress;
 - (nonnull instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -126,12 +127,15 @@ SWIFT_CLASS("_TtC15ElegantProgress16InnerShadowLayer")
 + (UIColor * __nonnull)hexColor:(NSInteger)color;
 @end
 
+@class UITouch;
+@class UIEvent;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC15ElegantProgress14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic) ElegantProgressView * __null_unspecified progressView;
 - (void)viewDidLoad;
+- (void)touchesBegan:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
