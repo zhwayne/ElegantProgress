@@ -1,8 +1,0 @@
-version: "Apple Swift version 2.0 (swiftlang-700.0.38.1 clang-700.0.53)"
-options: "9fcf03658b6f18eb72be79a719b65d1e"
-inputs: 
-- "/Users/wayne/Desktop/github/ElegantProgress/ElegantProgress/UIColor+Ex.swift"
-- "/Users/wayne/Desktop/github/ElegantProgress/ElegantProgress/ElegantProgressView.swift"
-- "/Users/wayne/Desktop/github/ElegantProgress/ElegantProgress/ViewController.swift"
-- "/Users/wayne/Desktop/github/ElegantProgress/ElegantProgress/InnerShadowLayer.swift"
-- "/Users/wayne/Desktop/github/ElegantProgress/ElegantProgress/AppDelegate.swift"
