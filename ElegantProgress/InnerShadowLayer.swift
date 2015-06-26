@@ -53,7 +53,7 @@ class InnerShadowLayer: CALayer {
         // 允许平滑
         CGContextSetShouldAntialias(ctx, true);
         // 设置插值质量
-        CGContextSetInterpolationQuality(ctx, kCGInterpolationHigh);
+        CGContextSetInterpolationQuality(ctx, CGInterpolationQuality.High);
         
         // 以下为核心代码
         
