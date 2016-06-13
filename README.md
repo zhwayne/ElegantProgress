@@ -7,4 +7,4 @@
 Demo:
 
 
-<video id="myVideo" preload="auto" src="demo.m4v" type="video/mp4" loop autoplay controls></video>
+![](http://cdn.cocimg.com/bbs/attachment/postcate/topic/16/307402_189_d23014351328770370d40f6e531d8.gif)
